@@ -1,253 +1,201 @@
 
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale = 1">
-	<title>Website</title>
-	<link rel="stylesheet" href="css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="fontawesome-free/css/all.min.css">
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-</head>
-<body>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Солнечные батареи GreenCorp</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+        <link rel='stylesheet' href='all.min.css'>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <script src='all.min.js'></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    </head>
 
-	<div class="navigation">
-		<div class="logo">
-			<img src="images/logotype.png" alt="" class="logotype">
-		</div>
+    <body>
+        <header>
+            <img class="header__logo" src='img/logo.svg'>
+            <div class="header__controls">
+                <a href="#contacts">Контакты</a>
+                <button>Заказать</button>
+            </div>
+        </header>
 
-		<div class="nav-menu">
-			<ul class="menu">
-				<li class="nav-item"><a href="#" class="nav-link">Мужчины</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Женщины</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Парни</a></li>
-				<li class="nav-item"><a href="#" class="nav-link">Девушки</a></li>
-			</ul>
-		</div>
+        <section class="about">
+            <canvas class="orb-canvas" id="orb-canvas"></canvas>
+            <div class="about__info animate__animated animate__fadeInLeft animate__slow">
+                <h1>Солнечные панели GreenRobotic</h1>
+                <p>Производите дешёвую экологически чистую электроэнергию из солнечного света</p>
+                <button>Узнать подробнее <i class="fas fa-angle-right"></i></button>
+            </div>
+            <div class="about__images animate__animated animate__fadeInRight animate__slow">
+                <img class="about__sun-image" src="img/sun.png">
+                <img class="about__image" src="img/solar-panel.png">
+            </div>
+        </section>
 
-		<div class="search-block">
-			<div class="searsh">
-				<input type="text" class="search-form" placeholder="Поиск">
-				<a href="#" class="search-btn"><i class="fas fa-search"></i></a>
-			</div>
-		</div>
+        <section class="features" id="features">
+            <div class="cards">
+                <div class="cards__logo"> <!--Иконки надо делать в серых скругленных контейнерах-->
+                    <i class="fas fa-solar-panel"></i> <!--style="color: rgb(198, 240, 12)-->
+                    <!--<img class="header__logo" src='img/logo.svg'>-->
+                    <!-- <h3>Нам доверяют 5000+ счастливых клиентов</h3>
+                    <p>Мы помогли тысячам людей перейти на зеленую энергию.<br>
+                    После заказа мы позаботимся обо всем: Доставка панелей, проект, установка, помощь в использовании.</p>
+                    -->
+                    <h3 class="Zag.card">Уменьшите счета за электричество.</h3>
+                    <p>Используйте чистую солнечную энергию для питания своего дома: уменьшите зависимость от электросети и счета за электричество.</p>
+                </div>
 
-		<div class="personal-item">
-			<div class="auth">
-				<div class="login">
-					<a href="#" class="auth-link signIn"><i class="fas fa-user-circle"></i>Войти</a>
-				</div>
-				<div class="car">
-					<a href="#" class="auth-link"><i class="fas fa-shopping-cart"></i>Корзина</a>
-				</div>
-			</div>
-		</div>
-	</div>
+                <div class="cards__logo">
+                    <p style="font-size: 40px;"> </p> <!--style="color: blue; font-size: 12px; font-family: Arial"--> <!--style="background-color:red; width:40px"-->
+                    <span class="text24-7"> 24/7 </span>
+                    <p style="font-size: 80px;"> </p>
+                    <h3 class="Zag.card">Мониторинг электроэнергии.</h3>
+                    <p>Управляйте своей системой солнечных панелей из любой точки мира с помощью специального мобильного приложения.</p>
+                </div>
 
-	<div class="sign-block">
-		<div class="sign">
-			<a href="#" class="exit"><i class="fas fa-times"></i></a>
-			<h4 class="sign-head">Вход</h4>
+                <div class="cards__logo">
+                    <i class="fa-solid fa-chart-line"></i> 
+                    <h3>Максимальная эффективность.</h3>
+                    <p>Солнечные панели GreenRobotic обеспечивают максимальное производство энергии круглый год, даже на крышах со сложными углами.</p>
+                </div>
 
-			<div class="input-data">
-				<input type="text" placeholder="введите логин">
-			</div>
-			<div class="input-data">
-				<input type="password" placeholder="введите пароль">
-			</div>
-			<div class="input-btn">
-				<input type="submit" value="Войти">
-			</div>
+            </div>
+        </section>
 
-			<p class="notReg">Ещё не зарегистрированы?</p>
-			<div class="input-btn notReg-btn">
-				<input type="submit" value="Зарегистрироваться">
-			</div>
-		</div>
-	</div>
+        <section>
+            <div class="features__border">
+                <div class="features__feedback"> 
+                    <div class="features__feedback-left">
+                        <h2>Нам доверяют <br>
+                            <div class="features__clients-count">5000+</div> счастливых клиентов</h2>
+                        <p>Мы помогли тысячам людей перейти на зеленую энергию.<br>
+                        После заказа мы позаботимся обо всем: Доставка панелей, проект, установка, помощь в использовании.</p>
+                    </div>
+                    <div class="features__feedback-right">
+                        <div class="features__box features__savings-box">
+                            <h3>30 млн ₽</h3>
+                            <p>Помогаем экономить нашим клиентам ежемесячно.</p>
+                        </div>
 
-	<div class="mobile-navigation">
-		<a href="#" class="burger-link">
-			<span></span>
-		</a>
+                        <div class="features__box features__rate-box">
+                            <h3>4.7</h3>
+                            <p class="stars">
+                                <i class="fa-solid fa-star" style="color: red"></i>
+                                <i class="fa-solid fa-star" style="color: red"></i>
+                                <i class="fa-solid fa-star" style="color: red"></i>
+                                <i class="fa-solid fa-star" style="color: red"></i>
+                                <i class="fa-solid fa-star" style="color: red"></i>
+                            </p>
+                            <p>Средняя оценка наших клиентов.</p>
+                        </div>
+                    </div>
+                </div>
 
-		<div class="mobile-nav">
-			<ul class="mobile-menu">
-				<li class="menu-item">
-					<a href="#" class="menu-link signInMobile">Войти</a>
-				</li>
-				<li class="menu-item">
-					<a href="#" class="menu-link">Мужчины</a>
-				</li>
-				<li class="menu-item">
-					<a href="#" class="menu-link">Женщины</a>
-				</li>
-				<li class="menu-item">
-					<a href="#" class="menu-link">Парни</a>
-				</li>
-				<li class="menu-item">
-					<a href="#" class="menu-link">Девушки</a>
-				</li>
-			</ul>
-		</div>
-	</div>
+            </div>
+        </section>
 
-	<div class="main-information">
-		<div class="text-inform">
-			<h1 class="animated">The new <strong>990</strong></h1>
-			<p class="tagline">Их носят супермодели в Лондоне и отцы в Огайо</p>
-			<div class="inform-link">
-				<div class="inform-btn read">Читать далее</div>
-				<div class="inform-btn shop">Купить сейчас</div>
-			</div>
-		</div>
+        <section class="promo">
+            <div class="promo__image"> <!--<img src='img/promo.jpg'>-->
+                <h1> </h1>
+            </div>
 
-		<div class="photo-model">
-			<img src="images/model.png" alt="">
-		</div>
-	</div>
+            <div class="promo__right">
+                <div>
+                <h2>Зарядите свой дом.</h2>
+                <ui>
+                <li>Солнечные панели сертифицированы мировыми экспертами: система безопасна и надежна.</li> <br>
+                <li>Следите за накоплением энергии вашего дома в режиме реального времени и настраивайте процент расхода и накопления энергии.</li>
+                </ui>
+                <br>
+                <div class="buttonZ">
+                <button>Заказать<i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
 
-	<div class="social">
-		<div class="find">
-			<a href="#"><i class="fas fa-map-marker-alt"></i>Найти магазин</a>
-		</div>
+        </section>
 
-		<div class="social-menu">
-			<h4 class="connect">оставайся на связи</h4>
+        <section class="form">
+            <div class="form__containter">
+                <h1>Оставьте свои контакты</h1>
+                <p>Поможем подобрать модель. <br> Выбрать удобный вариант доставки и установки. <br> Гарантия возврата денег.</p>
+                <form>
+                    <div class="form__group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" placeholder="Введите имя" id="name">
+                    </div>
+                    <div class="form__group">
+                        <label for="email">Электронный адрес</label>
+                        <input type="email" placeholder="***@yandex.ru" id="email">
+                    </div>
+                    <div class="form__group">
+                        <label for="phone">Номер телефона</label>
+                        <input type="tel" placeholder="7 (999) 999-99-99" id="phone">
+                    </div>
+                    <div class="form__group">
+                        <label for="budget">Примерный бюджет</label>
+                        <select id="budget">
+                            <option>
+                                Выберите вариант
+                                </option>
+                                <option value="10 - 30">
+                                10 000₽ - 30 000₽
+                                </option>
+                                <option value="30 - 60">
+                                30 000₽ - 60 000₽
+                                </option>
+                                <option value="60 - 100">
+                                60 000₽ - 100 000₽
+                                </option>
+                                <option value="other">
+                                Другое
+                            </option>
+                        </select>
+                    </div>
+                    <button type="submit" class="form__submit">
+                        Отправить заявку
+                    </button>
+                </form>
+            </div>
+        </section>
 
-			<ul class="social-icon">
-				<li><a href="#" class="social-link"><i class="fab fa-facebook"></i></a></li>
-				<li><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
-				<li><a href="#" class="social-link"><i class="fab fa-pinterest"></i></a></li>
-				<li><a href="#" class="social-link"><i class="fab fa-youtube"></i></a></li>
-				<li><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
-			</ul>
-		</div>
-	</div>
+        <script src="js/animations.js"></script>
+        <script src="js/canvas.js"></script>
+    </body>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script type="text/javascript">
-		TweenMax.from(".text-inform h1", 1, {
-			delay: .4,
-			y: 20,
-			opacity: 0,
-			ease:Expo.easeInOut
-		});
-
-		TweenMax.from(".tagline", 1, {
-			delay: .7,
-			y: 20,
-			opacity: 0,
-			ease:Expo.easeInOut
-		});
-
-		TweenMax.from(".inform-btn", 1, {
-			delay: 1,
-			y: 20,
-			opacity: 0,
-			ease:Expo.easeInOut
-		});
-
-		TweenMax.from(".photo-model", 1, {
-			delay: .4,
-			y: 20,
-			opacity: 0,
-			ease:Expo.easeInOut
-		});
-
-		TweenMax.from(".logo", 1, {
-			delay: 2.2,
-			y: -20,
-			opacity: 0,
-			ease:Expo.easeInOut
-		});
-
-		TweenMax.from(".menu", 1, {
-			delay: 2.4,
-			y: -20,
-			opacity: 0,
-			ease:Expo.easeInOut
-		});
-
-		TweenMax.from(".search-block", 1, {
-			delay: 2.6,
-			y: -20,
-			opacity: 0,
-			ease:Expo.easeInOut
-		});
-
-		TweenMax.from(".personal-item", 1, {
-			delay: 2.8,
-			y: -20,
-			opacity: 0,
-			ease:Expo.easeInOut
-		});
-
-		TweenMax.from(".find", 1, {
-			delay: 3.2,
-			y: 20,
-			opacity: 0,
-			ease:Expo.easeInOut
-		});
-
-		TweenMax.from(".connect", 1, {
-			delay: 3.4,
-			y: 20,
-			opacity: 0,
-			ease:Expo.easeInOut
-		});
-
-		TweenMax.from(".social-icon", 1, {
-			delay: 3.6,
-			y: 20,
-			opacity: 0,
-			ease:Expo.easeInOut
-		});
-
-		TweenMax.from(".burger-link", 1, {
-			delay: 3,
-			y: -20,
-			opacity: 0,
-			ease:Expo.easeInOut
-		});
-		$(document).ready(function () {
-			var link = $('.burger-link');
-			var link_active = $('.burger-link_active');
-			var navigation = $('.mobile-nav');
-			var nav_active = $('.nav-active');
-
-			var sign = $('.signIn');
-			var signBlock = $('.sign-block');
-			var signBlock_active = $('.sign-block_active');
-			var exit = $('.exit');
-			var signInMobile = $('.signInMobile');
-
-			link.click(function(){
-				link.toggleClass('burger-link_active');
-				navigation.toggleClass('nav-active');
-			});
-
-			link_active.click(function(){
-				navigation.removeClass('nav-active');
-			});
-
-			sign.click(function(){
-				signBlock.toggleClass('sign-block_active');
-			});
-
-			signInMobile.click(function(){
-				signBlock.toggleClass('sign-block_active');
-				navigation.removeClass('nav-active');
-				link.removeClass('burger-link_active');
-			});
-
-			exit.click(function(){
-				signBlock.removeClass('sign-block_active');
-			});
-		});
-	</script>
-
-</body>
+    <footer>
+        <div class="footer__container">
+            <div class="footer__group">
+                <h3>Позвонить нам:</h3>
+                <div class="footer__links">
+                    <a href="tel:74959999999">+7 (495) 999-99-99</a>
+                </div>
+            </div>
+            <div class="footer__group">
+                <h3>Решения для дома:</h3>
+                <div class="footer__links">
+                    <a href="#">Солнечные панели GreenRobotic</a>
+                    <a href="#">Системы солнечных панелей GreenStation</a>
+                </div>
+            </div>
+            <div class="footer__group">
+                <h3>Компания:</h3>
+                <div class="footer__links">
+                    <a href="#">Контакты</a>
+                    <a href="#">Вакансии</a>
+                    <a href="#">СМИ</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer__copy">
+            GreenCorp © 2021
+        </div>
+    </footer>
 </html>
+ 
